@@ -1,6 +1,7 @@
 import {platform, release} from 'node:os';
 import {expectType} from 'tsd';
-import osName from './index.js';
+import * as os from 'os';
+import osName = require('.');
 
 expectType<string>(osName());
 expectType<string>(osName(platform(), release()));

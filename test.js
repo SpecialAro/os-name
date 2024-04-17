@@ -1,6 +1,6 @@
-import os from 'node:os';
+import os from 'os';
 import test from 'ava';
-import osName from './index.js';
+import osName from '.';
 
 test('main', t => {
 	t.true(osName().length > 0);

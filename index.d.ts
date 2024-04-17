@@ -8,8 +8,8 @@ By default, the name of the current operating system is returned.
 
 @example
 ```
-import os from 'node:os';
-import osName from 'os-name';
+import * as os fron 'os';
+import osName = require('os-name');
 
 // On a macOS Sierra system
 
@@ -29,5 +29,7 @@ osName('win32', '6.3.9600');
 //=> 'Windows 8.1'
 ```
 */
-export default function osName(): string;
-export default function osName(platform: NodeJS.Platform, release: string): string;
+declare function osName(): string;
+declare function osName(platform: NodeJS.Platform, release: string): string;
+
+export = osName;
